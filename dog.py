@@ -9,7 +9,7 @@ class Dog:
         return self.name
 
     def _set_name(self, name):
-        if name != " ":
+        if not " ":
             self.name = name
 
     # Set and Get for Breed
@@ -33,7 +33,7 @@ class Dog:
         return self.age
 
     def _set_age(self, age):
-        if age > 0:
+        if age < 0:
             self.age = age
 
     Name = property(_get_name, _set_name)
